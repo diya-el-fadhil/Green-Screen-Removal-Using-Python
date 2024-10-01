@@ -1,0 +1,135 @@
+/* Basic styling for the page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents any unwanted page overflow */
+}
+
+/* Flexbox for centering the container */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden; /* Prevent container content from overflowing */
+}
+
+.container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading styling */
+h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #333;
+    word-wrap: break-word; /* Ensures long text wraps inside the container */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    overflow: hidden; /* Prevents overflow in form fields */
+}
+
+/* Label styling */
+label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+    word-wrap: break-word; /* Ensure long labels break and wrap */
+}
+
+/* Dotted border for file upload */
+input[type="file"] {
+    width: 100%;
+    padding: 20px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 2px dotted #cccccc;
+    background-color: #fafafa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Ensure padding fits within width */
+}
+
+input[type="file"]:hover {
+    border-color: #28a745;
+    background-color: #f0f8f5;
+}
+
+/* Custom button styling */
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Ensure padding fits within width */
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Additional form spacing and styles */
+.form-group input[type="file"] {
+    padding: 16px;
+    font-size: 14px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.form-group input[type="file"]::file-selector-button {
+    display: none; /* Hide default file upload button */
+}
+
+input[type="file"]::before {
+    content: "Click or drag files here to upload";
+    display: block;
+    font-size: 14px;
+    color: #777;
+    word-wrap: break-word; /* Prevents long text from overflowing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    input[type="file"] {
+        padding: 15px;
+    }
+
+    input[type="submit"] {
+        padding: 10px;
+    }
+}
